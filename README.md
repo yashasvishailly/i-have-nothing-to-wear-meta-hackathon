@@ -1,6 +1,6 @@
 # I have Nothing to Wear!
 
-You can have a full wardrobe and still struggle to put together an outfit for the occasion; this app helps you see combinations from clothes you already own.
+“I have nothing to wear” is a familiar feeling for both men and women. As a woman, I understand how a wardrobe full of clothes can still leave you struggling to put together an outfit for a particular occasion, place or situation. This app helps you see combinations from clothes you already own.
 
 A mobile-first wardrobe app: add outfit photos to **The Pile**, keep individual pieces in **Wardrobe**, and mix them into saved looks in **Hanger**.
 
