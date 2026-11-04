@@ -12,18 +12,18 @@ Live app: https://wardrobe.yashasvishailly.com
 
 1. After permission, Meta **Muse Spark 1.3** identifies visible wearable pieces and their regions in the selected photo. Inference runs on Meta's hosted API (`api.meta.ai`), called server-side by the app's Cloudflare Worker.
 2. The app derives the corresponding source crops and validates their relationship to the discovered regions.
-3. **The OpenAI API regenerates the individual previews, including obscured parts**, from those crops using `gpt-image-2.5-sunburst-2026-09-08`. The Cloudflare Worker calls the hosted inference endpoint (`api.openai.com`) server-side. The active ordinary-upload flow does not use SAM. Historical segmentation experiments remain in the source but are not the current hosted processing path.
+3. **The OpenAI API regenerates the individual previews, including obscured parts**, from those crops using `gpt-image-2.5-sunburst-2026-09-08`. The Cloudflare Worker calls the hosted inference endpoint (`api.openai.com`) server-side. The active ordinary-upload flow does not use Meta SAM. Historical segmentation experiments remain in the source but are not the current hosted processing path.
 4. Finished pieces are saved in this browser. Hanger uses local outfit rules in the browser to combine available inventory across source photos, swap pieces and save looks; it does not call a model.
 
 Generated previews can change details. The app does not guarantee faithful reconstruction of hidden clothing or small accessories. The sample picker uses previously saved synthetic results without new provider requests.
 
-### Muse Image availability in India and eligibility clarification
+### Meta Muse Image availability in India and eligibility clarification
 
-The obvious choice for image regeneration was Meta Muse Image, but it is not available to me in India, so it is not used in the current flow. [Meta's geographic use policy](https://dev.meta.ai/legal/geographic-use-policy/) lists Muse Image as unavailable from India and prohibits bypassing geographic access controls. OpenRouter is an officially listed provider, but provider availability does not establish permission to access Muse Image from India. We will not switch to OpenRouter on that basis without explicit clarification covering India or use it to bypass the restriction.
+The obvious choice for image regeneration was Meta Muse Image, but it is not available to me in India, so it is not used in the current flow. [Meta's geographic use policy](https://dev.meta.ai/legal/geographic-use-policy/) lists Meta Muse Image as unavailable from India and prohibits bypassing geographic access controls. OpenRouter is an officially listed provider, but provider availability does not establish permission to access Meta Muse Image from India. We will not switch to OpenRouter on that basis without explicit clarification covering India or use it to bypass the restriction.
 
 OpenRouter was suggested in the Discord channel, but I could not confirm an India-specific exception to the restriction, so it was not used.
 
-The Cerebral Valley verified app said that Muse Image being unavailable in India would not count against this project. This is app guidance, not a confirmed human organizer ruling. Its replies about eligibility of the Meta discovery/OpenAI preview hybrid conflicted; a human organizer ruling remains pending.
+The Cerebral Valley verified app said that Meta Muse Image being unavailable in India would not count against this project. This is app guidance, not a confirmed human organizer ruling. Its replies about eligibility of the Meta discovery/OpenAI preview hybrid conflicted; a human organizer ruling remains pending.
 
 ## Run locally
 
