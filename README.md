@@ -11,7 +11,7 @@ Live app: https://wardrobe.yashasvishailly.com
 3. **OpenAI regenerates the individual previews, including obscured parts**, from those crops using `gpt-image-2.5-sunburst-2026-09-08`. Inference runs on OpenAI's hosted API (`api.openai.com`), called server-side by the Cloudflare Worker. The active ordinary-upload flow does not use SAM. Historical segmentation experiments remain in the source but are not the current hosted processing path.
 4. Finished pieces are saved in this browser. Hanger uses local outfit rules in the browser to combine available inventory across source photos, swap pieces and save looks; it does not call a model.
 
-Generated previews can change details. The app does not guarantee faithful reconstruction of hidden clothing or small accessories. Kurta/tunic classification remains a known limitation. The sample picker uses previously saved synthetic results without new provider requests; one male sample watch was separately colour-corrected and does not demonstrate successful app watch reconstruction.
+Generated previews can change details. The app does not guarantee faithful reconstruction of hidden clothing or small accessories. Kurta/tunic classification remains a known limitation. The sample picker uses previously saved synthetic results without new provider requests.
 
 ### Muse Image availability in India and eligibility clarification
 
