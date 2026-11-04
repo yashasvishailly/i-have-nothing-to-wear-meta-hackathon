@@ -1,5 +1,7 @@
 # I have Nothing to Wear!
 
+You can have a full wardrobe and still struggle to put together an outfit for the occasion; this app helps you see combinations from clothes you already own.
+
 A mobile-first wardrobe app: add outfit photos to **The Pile**, keep individual pieces in **Wardrobe**, and mix them into saved looks in **Hanger**.
 
 Live app: https://wardrobe.yashasvishailly.com
