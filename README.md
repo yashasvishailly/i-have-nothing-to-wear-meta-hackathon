@@ -12,7 +12,7 @@ Live app: https://wardrobe.yashasvishailly.com
 
 1. After permission, Meta **Muse Spark 1.3** identifies visible wearable pieces and their regions in the selected photo. Inference runs on Meta's hosted API (`api.meta.ai`), called server-side by the app's Cloudflare Worker.
 2. The app derives the corresponding source crops and validates their relationship to the discovered regions.
-3. **The OpenAI API regenerates the individual previews, including obscured parts**, from those crops using `gpt-image-2.5-sunburst-2026-09-08`. The Cloudflare Worker calls the hosted inference endpoint (`api.openai.com`) server-side. The active ordinary-upload flow uses Meta Muse Spark 1.3 for discovery and does not use Meta SAM. Earlier segmentation experiments used Meta SAM 3.1; they remain in the source but are not the current hosted processing path.
+3. **The OpenAI API regenerates the individual previews, including obscured parts**, from those crops using `gpt-image-2.5-sunburst-2026-09-08`. The Cloudflare Worker calls the hosted inference endpoint (`api.openai.com`) server-side. Meta SAM 3.1 was used in earlier experiments and remains in the source. The live app uses Meta Muse Spark 1.3 for discovery.
 4. Finished pieces are saved in this browser. Hanger uses local outfit rules in the browser to combine available inventory across source photos, swap pieces and save looks; it does not call a model.
 
 Generated previews can change details. The app does not guarantee faithful reconstruction of hidden clothing or small accessories. The sample picker uses previously saved synthetic results without new provider requests.
