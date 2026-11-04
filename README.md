@@ -17,7 +17,7 @@ Generated previews can change details. The app does not guarantee faithful recon
 
 Meta **Muse Image is not used in the current flow**. [Meta's geographic use policy](https://dev.meta.ai/legal/geographic-use-policy/) lists Muse Image as unavailable from India and prohibits bypassing geographic access controls. OpenRouter is an officially listed provider, but provider availability does not establish permission to access Muse Image from India. We will not switch to OpenRouter on that basis without explicit clarification covering India or use it to bypass the restriction.
 
-The Cerebral Valley verified app said that Muse Image being unavailable in India would not count against this project. This is app guidance, not a confirmed human organizer ruling. Its replies about eligibility of the Meta discovery/OpenAI preview hybrid conflicted; a human organizer ruling remains pending. This README does not assert eligibility or confirmed approval of the hybrid.
+The Cerebral Valley verified app said that Muse Image being unavailable in India would not count against this project. This is app guidance, not a confirmed human organizer ruling. Its replies about eligibility of the Meta discovery/OpenAI preview hybrid conflicted; a human organizer ruling remains pending.
 
 ## Run locally
 
