@@ -4,13 +4,15 @@
 
 A mobile-first wardrobe app: add outfit photos to **The Pile**, keep individual pieces in **Wardrobe**, and mix them into saved looks in **Hanger**.
 
+The Pile is that pile of clothes on your bed or chair. Sort it into the Wardrobe, and hang the outfits you pick on the Hanger.
+
 Live app: https://wardrobe.yashasvishailly.com
 
 ## What powers the current flow
 
 1. After permission, Meta **Muse Spark 1.3** identifies visible wearable pieces and their regions in the selected photo. Inference runs on Meta's hosted API (`api.meta.ai`), called server-side by the app's Cloudflare Worker.
 2. The app derives the corresponding source crops and validates their relationship to the discovered regions.
-3. **OpenAI regenerates the individual previews, including obscured parts**, from those crops using `gpt-image-2.5-sunburst-2026-09-08`. Inference runs on OpenAI's hosted API (`api.openai.com`), called server-side by the Cloudflare Worker. The active ordinary-upload flow does not use SAM. Historical segmentation experiments remain in the source but are not the current hosted processing path.
+3. **The OpenAI API regenerates the individual previews, including obscured parts**, from those crops using `gpt-image-2.5-sunburst-2026-09-08`. The Cloudflare Worker calls the hosted inference endpoint (`api.openai.com`) server-side. The active ordinary-upload flow does not use SAM. Historical segmentation experiments remain in the source but are not the current hosted processing path.
 4. Finished pieces are saved in this browser. Hanger uses local outfit rules in the browser to combine available inventory across source photos, swap pieces and save looks; it does not call a model.
 
 Generated previews can change details. The app does not guarantee faithful reconstruction of hidden clothing or small accessories. The sample picker uses previously saved synthetic results without new provider requests.
