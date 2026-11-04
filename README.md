@@ -21,6 +21,8 @@ Generated previews can change details. The app does not guarantee faithful recon
 
 The obvious choice for image regeneration was Meta Muse Image, but it is not available to me in India, so it is not used in the current flow. [Meta's geographic use policy](https://dev.meta.ai/legal/geographic-use-policy/) lists Muse Image as unavailable from India and prohibits bypassing geographic access controls. OpenRouter is an officially listed provider, but provider availability does not establish permission to access Muse Image from India. We will not switch to OpenRouter on that basis without explicit clarification covering India or use it to bypass the restriction.
 
+OpenRouter was suggested in the Discord channel, but I could not confirm an India-specific exception to the restriction, so it was not used.
+
 The Cerebral Valley verified app said that Muse Image being unavailable in India would not count against this project. This is app guidance, not a confirmed human organizer ruling. Its replies about eligibility of the Meta discovery/OpenAI preview hybrid conflicted; a human organizer ruling remains pending.
 
 ## Run locally
