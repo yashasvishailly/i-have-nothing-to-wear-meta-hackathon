@@ -1,0 +1,24 @@
+{
+  "name": "i-have-nothing-to-wear",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "typecheck": "tsc --noEmit",
+    "build": "node build.mjs",
+    "test": "npm run build --silent && node --import tsx --test tests/*.test.ts",
+    "dev:key": "zsh -f scripts/start-local.zsh",
+    "check:public-identity": "node scripts/check-public-identities.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1",
+    "esbuild": "0.25.11",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3"
+  },
+  "dependencies": {
+    "@meta-sam/parser": "0.1.0",
+    "jose": "6.2.15"
+  }
+}

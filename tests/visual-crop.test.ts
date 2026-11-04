@@ -1,0 +1,5 @@
+import{test}from'node:test';import assert from'node:assert/strict';import{adjustCrop,type CropAction}from'../src/visual-crop';
+const original={x:.2,y:.2,w:.6,h:.6};
+test('crop moves stay within the photo without changing size',()=>{assert.deepEqual(adjustCrop(original,'move',-2,2),{x:0,y:.4,w:.6,h:.6});assert.deepEqual(original,{x:.2,y:.2,w:.6,h:.6});});
+test('all crop corners stay positive and bounded, keeping the opposite corner anchored',()=>{for(const action of ['nw','ne','sw','se']as CropAction[])for(const dx of [-5,0,5])for(const dy of [-5,0,5]){const r=adjustCrop(original,action,dx,dy);assert.ok(r.x>=0&&r.y>=0&&r.w>=.019999&&r.h>=.019999&&r.x+r.w<=1.000001&&r.y+r.h<=1.000001);if(action.includes('w'))assert.ok(Math.abs(r.x+r.w-.8)<1e-9);else assert.equal(r.x,.2);if(action.includes('n'))assert.ok(Math.abs(r.y+r.h-.8)<1e-9);else assert.equal(r.y,.2);}});
+test('invalid crop movement cannot produce invalid canvas coordinates',()=>{assert.throws(()=>adjustCrop(original,'move',NaN,0));});

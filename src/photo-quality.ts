@@ -1,0 +1,7 @@
+export const photoQualityReasons=['ok','too_dark','too_blurry','clothes_hidden','uncertain'] as const;
+export type PhotoQualityReason=typeof photoQualityReasons[number];
+export interface PhotoQuality{usable:boolean;reason:PhotoQualityReason;}
+export const photoQualitySchema={type:'object',additionalProperties:false,properties:{usable:{type:'boolean'},reason:{type:'string',enum:photoQualityReasons}},required:['usable','reason']};
+export function validatedPhotoQuality(value:any):PhotoQuality{if(!value||Object.keys(value).sort().join(',')!=='reason,usable'||typeof value.usable!=='boolean'||!photoQualityReasons.includes(value.reason)||value.usable!==(value.reason==='ok'))throw Error('invalid_photo_quality');return{usable:value.usable,reason:value.reason};}
+export function photoResolutionIssue(width:number,height:number){return ![width,height].every(Number.isSafeInteger)||Math.min(width,height)<480||Math.max(width,height)<640?'Choose a clearer photo at least 480 pixels on the short side and 640 on the long side.':null;}
+export function photoQualityMessage(reason:PhotoQualityReason){return{ok:'',too_dark:'This photo is too dark to identify your clothes. Try a well-lit photo.',too_blurry:'This photo is too blurry to identify your clothes. Try a sharper photo.',clothes_hidden:'Your clothes are not visible enough. Try a photo that shows them clearly.',uncertain:'We could not assess this photo clearly. Try a brighter, sharper photo.'}[reason];}

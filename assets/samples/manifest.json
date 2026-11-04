@@ -1,0 +1,213 @@
+{
+  "onlyExplicitlyApprovedSyntheticAssets": true,
+  "files": [
+    {
+      "file": "sample-one-source.png",
+      "sha256": "3e2c51839f31cc1c65d82940a48d996f49f33cdcbf543d0ce830e7d8b409b169",
+      "bytes": 507719,
+      "aiGeneratedSynthetic": true,
+      "metadataRemoved": true,
+      "pixelsUnchanged": true
+    },
+    {
+      "file": "sample-two-source.png",
+      "sha256": "d6ce8b6682db681de349f384b69105ef7a16461e449706fed79ad2793d6e8b2d",
+      "bytes": 502506,
+      "aiGeneratedSynthetic": true,
+      "metadataRemoved": true,
+      "pixelsUnchanged": true
+    },
+    {
+      "file": "sample-one-piece-0.png",
+      "sha256": "f248016b0c45c9fdfdfa62d728ca1b39938fdf59f81c0e8aac0aeff9075bf9b3",
+      "bytes": 376668,
+      "aiGeneratedSynthetic": true,
+      "metadataRemoved": true,
+      "pixelsUnchanged": true
+    },
+    {
+      "file": "sample-one-piece-1.png",
+      "sha256": "d5a827e91aacd4636bd162eae0a7cf56652baebf6300593370397812387af59f",
+      "bytes": 401924,
+      "aiGeneratedSynthetic": true,
+      "metadataRemoved": true,
+      "pixelsUnchanged": true
+    },
+    {
+      "file": "sample-one-piece-2.png",
+      "sha256": "7c937d3768bb113e708c06e56f5a4d5d70a7a8c15ee4921f8957e7c75ae9a23c",
+      "bytes": 184834,
+      "aiGeneratedSynthetic": true,
+      "metadataRemoved": true,
+      "pixelsUnchanged": true
+    },
+    {
+      "file": "sample-one-piece-3.png",
+      "sha256": "1e54694bebb4bf50ab6f18b4c4e73933bc50c94bbafef3a6780c169da0763bdc",
+      "bytes": 368157,
+      "aiGeneratedSynthetic": true,
+      "metadataRemoved": true,
+      "pixelsUnchanged": true
+    },
+    {
+      "file": "sample-one-piece-4.png",
+      "sha256": "d7cefc516928f307f048fe77250466a2a2cf9dae0f7e029ed40e3b438792feef",
+      "bytes": 121306,
+      "aiGeneratedSynthetic": true,
+      "metadataRemoved": true,
+      "pixelsUnchanged": true
+    },
+    {
+      "file": "sample-one-piece-5.png",
+      "sha256": "a598fdef206841820771bc86c1b906ade52b7074f9b97f41034e6119448ae1e1",
+      "bytes": 309849,
+      "aiGeneratedSynthetic": true,
+      "metadataRemoved": true,
+      "pixelsUnchanged": true
+    },
+    {
+      "file": "sample-one-piece-6.png",
+      "sha256": "dca80075a75cb96a7a9dfc460d951db01c868d183a24f72d13be719a89c517fd",
+      "bytes": 89726,
+      "aiGeneratedSynthetic": true,
+      "metadataRemoved": true,
+      "pixelsUnchanged": true
+    },
+    {
+      "file": "sample-two-top.png",
+      "sha256": "758cde6d5f66e9b3ae2ce19dcd732e99eeea8a7f774d25332efaf7a7d16f4414",
+      "bytes": 264369,
+      "aiGeneratedSynthetic": true,
+      "metadataRemoved": true,
+      "pixelsUnchanged": true
+    },
+    {
+      "file": "sample-two-jeans.png",
+      "sha256": "ab2ab453709867163c21caaa332189e165687d71619ed101ace3b6d025b576e5",
+      "bytes": 230128,
+      "aiGeneratedSynthetic": true,
+      "metadataRemoved": true,
+      "pixelsUnchanged": true
+    },
+    {
+      "file": "sample-two-shoes.png",
+      "sha256": "cac42216f1ef72fdc07c06823c2df60b80d72c7585f208e72def2af8652a72b3",
+      "bytes": 173915,
+      "aiGeneratedSynthetic": true,
+      "metadataRemoved": true,
+      "pixelsUnchanged": true
+    },
+    {
+      "file": "sample-two-bag.png",
+      "sha256": "b3832fd877fdff2d82163603b8e32ba60d4e56562629f6dbe76e7bb5db229e2a",
+      "bytes": 332109,
+      "aiGeneratedSynthetic": true,
+      "metadataRemoved": true,
+      "pixelsUnchanged": true
+    },
+    {
+      "file": "sample-three-source.png",
+      "sha256": "cc9388e66673226445be0c08e14bb676cd5303d91dbb8ac49881cb71380838de",
+      "bytes": 494867,
+      "aiGeneratedSynthetic": true,
+      "metadataRemoved": true,
+      "pixelsUnchanged": true
+    },
+    {
+      "file": "sample-three-shirt.png",
+      "sha256": "393d22f99833e4640c43a034b6c0b721f72e6085c6c94981c86dc3de543830cf",
+      "bytes": 304458,
+      "aiGeneratedSynthetic": true,
+      "metadataRemoved": true,
+      "pixelsUnchanged": true
+    },
+    {
+      "file": "sample-three-trousers.png",
+      "sha256": "1bfb48b671a2da407f00f05e8f452c53635ba662727c9a5e32bf03f7a1ec708f",
+      "bytes": 158791,
+      "aiGeneratedSynthetic": true,
+      "metadataRemoved": true,
+      "pixelsUnchanged": true
+    },
+    {
+      "file": "sample-three-sneakers.png",
+      "sha256": "f20f5be86ba3e896ae76ea53cd64c681041eceb4fea2afbf72780e18f9197827",
+      "bytes": 174345,
+      "aiGeneratedSynthetic": true,
+      "metadataRemoved": true,
+      "pixelsUnchanged": true
+    },
+    {
+      "file": "sample-three-bag.png",
+      "sha256": "79890b8c0d4bd3dc2417fe5bde2e0e9cc3c12f771d381b2164d23e1e3d1f4f90",
+      "bytes": 227755,
+      "aiGeneratedSynthetic": true,
+      "metadataRemoved": true,
+      "pixelsUnchanged": true
+    },
+    {
+      "file": "sample-three-watch.png",
+      "sha256": "9c7f6fdc3c2b5bc72a1c8fa116758552ee7598aae707a792dcc69ab329fc5fb1",
+      "bytes": 239563,
+      "aiGeneratedSynthetic": true,
+      "metadataRemoved": true,
+      "pixelsUnchanged": true
+    },
+    {
+      "file": "sample-four-source.png",
+      "sha256": "5cbc8bb15780bb022488e9fb0d305be844c2ea59620c602104d5c955228003af",
+      "bytes": 1879734,
+      "aiGeneratedSynthetic": true,
+      "metadataRemoved": false,
+      "pixelsUnchanged": true
+    },
+    {
+      "file": "sample-four-trousers.png",
+      "sha256": "c86f0cc084a141ed0306027ffd55c36f8e6d43af08bc1a3aba0b0fa478025287",
+      "bytes": 1190716,
+      "aiGeneratedSynthetic": true,
+      "metadataRemoved": false,
+      "pixelsUnchanged": true
+    },
+    {
+      "file": "sample-four-polo.png",
+      "sha256": "dc538517add203df7bc7bca5e3928dc17ac06f7f02671a121df3a0481e8b6e9a",
+      "bytes": 1586591,
+      "aiGeneratedSynthetic": true,
+      "metadataRemoved": false,
+      "pixelsUnchanged": true
+    },
+    {
+      "file": "sample-four-loafers.png",
+      "sha256": "bd9314998f074dcaa010a25933b9a1d508ebaa6a23d7f2fcdd29bae6b84a26dd",
+      "bytes": 947199,
+      "aiGeneratedSynthetic": true,
+      "metadataRemoved": false,
+      "pixelsUnchanged": true
+    },
+    {
+      "file": "sample-four-bag.png",
+      "sha256": "212d780dd0b34651bd3c86c4ce25e541502279628b937e5521625542519ca65b",
+      "bytes": 1528458,
+      "aiGeneratedSynthetic": true,
+      "metadataRemoved": false,
+      "pixelsUnchanged": true
+    },
+    {
+      "file": "sample-four-belt.png",
+      "sha256": "72a72d1910447e53e0da42692bdb78a6ec346435cdb95451efee90aacbee76bf",
+      "bytes": 684117,
+      "aiGeneratedSynthetic": true,
+      "metadataRemoved": false,
+      "pixelsUnchanged": true
+    },
+    {
+      "file": "sample-four-eyeglasses.png",
+      "sha256": "231b98c2892f598eac9ac0519a7115f4e29c74bcaa35cb1570bcd6205f309523",
+      "bytes": 749982,
+      "aiGeneratedSynthetic": true,
+      "metadataRemoved": false,
+      "pixelsUnchanged": true
+    }
+  ]
+}

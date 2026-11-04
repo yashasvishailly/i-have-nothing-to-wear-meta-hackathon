@@ -1,0 +1,7 @@
+import type{CropRect}from'./visual-crop';import{photoResolutionIssue}from'./photo-quality';import{boundedPhotoStep}from'./photo-response';
+export function processingCropBox(size:{width:number;height:number},rect:CropRect){
+ if(![size.width,size.height].every(n=>Number.isSafeInteger(n)&&n>0)||![rect.x,rect.y,rect.w,rect.h].every(Number.isFinite)||rect.x<0||rect.y<0||rect.w<=0||rect.h<=0||rect.x+rect.w>1.000001||rect.y+rect.h>1.000001)throw Error('Keep the crop inside the photo.');
+ const left=Math.round(rect.x*size.width),top=Math.round(rect.y*size.height),right=Math.min(size.width,Math.round((rect.x+rect.w)*size.width)),bottom=Math.min(size.height,Math.round((rect.y+rect.h)*size.height)),width=right-left,height=bottom-top;
+ if(photoResolutionIssue(width,height))throw Error('Include a larger area so the clothes stay clear.');return{left,top,width,height};
+}
+export async function prepareProcessingCrop(photo:HTMLImageElement,rect:CropRect){const box=processingCropBox({width:photo.naturalWidth,height:photo.naturalHeight},rect),canvas=document.createElement('canvas');canvas.width=box.width;canvas.height=box.height;canvas.getContext('2d')!.drawImage(photo,box.left,box.top,box.width,box.height,0,0,box.width,box.height);return boundedPhotoStep(new Promise<Blob>((ok,no)=>canvas.toBlob(blob=>blob?ok(blob):no(Error('Could not prepare this crop.')),'image/png')),new AbortController().signal,10000);}

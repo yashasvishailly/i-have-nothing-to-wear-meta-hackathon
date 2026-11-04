@@ -1,0 +1,12 @@
+// User-reviewed localization, not an independent machine/semantic verification.
+import{cropSourcePixels,type CropView}from'./localization-crop';
+export const checkedWatchProtocol='checked-watch-crop-v1';
+export interface CheckedWatchCrop{version:typeof checkedWatchProtocol;sourceSha256:string;pieceId:string;box:{left:number;top:number;width:number;height:number};faceVisible:true;visibleStrapIncluded:true;}
+export function checkedWatchCrop(value:unknown,sourceSha256:string,pieceId:string,size?:{width:number;height:number}):CheckedWatchCrop{
+ const v=value as CheckedWatchCrop,b=v?.box;
+ if(!v||Object.keys(v).sort().join(',')!=='box,faceVisible,pieceId,sourceSha256,version,visibleStrapIncluded'||v.version!==checkedWatchProtocol||v.sourceSha256!==sourceSha256||!/^[a-f0-9]{64}$/.test(sourceSha256)||v.pieceId!==pieceId||!/^piece-[a-f0-9]{24}$/.test(pieceId)||v.faceVisible!==true||v.visibleStrapIncluded!==true||!b||Object.keys(b).sort().join(',')!=='height,left,top,width'||![b.left,b.top,b.width,b.height].every(Number.isSafeInteger)||b.left<0||b.top<0||Math.min(b.width,b.height)<32||Math.max(b.width,b.height)>1024||b.width*b.height>1024*1024)throw Error('watch_crop_required');
+ if(size&&(b.left+b.width>size.width||b.top+b.height>size.height||b.width===size.width&&b.height===size.height))throw Error('watch_crop_invalid');
+ return{version:checkedWatchProtocol,sourceSha256,pieceId,box:{...b},faceVisible:true,visibleStrapIncluded:true};
+}
+export function checkedWatchPixels(source:{width:number;height:number;rgba:Uint8ClampedArray},value:unknown,hash:string,pieceId:string){const check=checkedWatchCrop(value,hash,pieceId,source);return cropSourcePixels(source,{sourceWidth:source.width,sourceHeight:source.height,...check.box} satisfies CropView);}
+export function checkedWatchPrompt(value:CheckedWatchCrop){checkedWatchCrop(value,value.sourceSha256,value.pieceId);return '\nThe user visually checked this selected source crop for the visible watch face and visible strap. This is user-reviewed localization, not independent machine verification. Do not use the earlier discovery box or anchor. Preserve only the observed watch face, case and visible strap, exact visible colour/material and readable markings. Keep unreadable or hidden details absent; never invent a face, hands, numerals, extra strap or clasp. Fit all visible material inside a transparent canvas with clear margins. A generated preview still requires result review.';}
