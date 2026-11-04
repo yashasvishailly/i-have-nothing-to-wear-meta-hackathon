@@ -8,7 +8,7 @@ Live app: https://wardrobe.yashasvishailly.com
 
 1. After permission, Meta **Muse Spark 1.3** identifies visible wearable pieces and their regions in the selected photo. Inference runs on Meta's hosted API (`api.meta.ai`), called server-side by the app's Cloudflare Worker.
 2. The app derives the corresponding source crops and validates their relationship to the discovered regions.
-3. **OpenAI image editing** (`gpt-image-2.5-sunburst-2026-09-08`) creates isolated wardrobe previews from those crops. Inference runs on OpenAI's hosted API (`api.openai.com`), called server-side by the Cloudflare Worker. The active ordinary-upload flow does not use SAM. Historical segmentation experiments remain in the source but are not the current hosted processing path.
+3. **OpenAI regenerates the individual previews, including obscured parts**, from those crops using `gpt-image-2.5-sunburst-2026-09-08`. Inference runs on OpenAI's hosted API (`api.openai.com`), called server-side by the Cloudflare Worker. The active ordinary-upload flow does not use SAM. Historical segmentation experiments remain in the source but are not the current hosted processing path.
 4. Finished pieces are saved in this browser. Hanger uses local outfit rules in the browser to combine available inventory across source photos, swap pieces and save looks; it does not call a model.
 
 Generated previews can change details. The app does not guarantee faithful reconstruction of hidden clothing or small accessories. Kurta/tunic classification remains a known limitation. The sample picker uses previously saved synthetic results without new provider requests; one male sample watch was separately colour-corrected and does not demonstrate successful app watch reconstruction.
@@ -36,7 +36,7 @@ The source contains short-window abuse protection for the open hosted route: one
 
 ## Privacy and storage
 
-Photos, pieces and saved looks remain in IndexedDB in the same browser. Clearing its storage removes them. On explicit permission, the analysis provider receives the selected photo and the image-editing provider receives the selected source crops, which can include faces, skin, other clothing or background. Provider data-use, retention and billing terms apply; free-credit processing may allow product-improvement use. Provider account retention settings have not been independently verified.
+Photos, pieces and saved looks remain in IndexedDB in the same browser. Clearing its storage removes them. On explicit permission, the analysis provider receives the selected photo and OpenAI receives the selected source crops to regenerate individual previews, including obscured parts. Those crops can include faces, skin, other clothing or background. Provider data-use, retention and billing terms apply; free-credit processing may allow product-improvement use. Provider account retention settings have not been independently verified.
 
 The application server stores processing hashes, request markers and outcomes, not wardrobe images. Browser-session processing metadata expires after thirty inactive days. The new abuse ledger retains only hashed anonymous session identifiers, random leases, stages and timestamps for a short rolling window, with deletion after ten inactive minutes. It stores no raw IPs or cookie tokens.
 
